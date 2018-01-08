@@ -1,5 +1,5 @@
 #カレントディレクトリを指定
-DIR="/Users/junya/Dropbox/Folder/Practice/Ruby/ReplaceText"
+DIR = "/Users/junya/Dropbox/Folder/Practice/Ruby/ReplaceText"
 
 #カレントディレクトリのsample.txtを読み取り形式で開く
 f = File.open("#{DIR}/sample.txt", "r")

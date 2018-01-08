@@ -1,5 +1,5 @@
-#カレントディレクトリを指定
-DIR=Dir.pwd
+#カレントディレクトリを指定(Dirオブジェクトのメソッドを使用)
+DIR = Dir.pwd
 
 #カレントディレクトリのsample.txtを読み取り形式で開く
 f = File.open("#{DIR}/sample.txt", "r")
