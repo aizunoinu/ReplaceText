@@ -5,8 +5,8 @@
 #カレントディレクトリの取得
 DIR = Dir.pwd
 
-#カレントディレクトリでtxtファイルを検索する
-Dir.glob('**/*.txt') do |file|
+#変数DIRで指定したディレクトリでtxtファイルを検索する
+Dir.glob("#{DIR}/*.txt") do |file|
     print "#{file} に対して置換処理を実施します\n"
     #ファイルを読み取り形式で開く
     f = File.open(file, "r")
@@ -30,6 +30,7 @@ Dir.glob('**/*.txt') do |file|
 
     f.write(buffer)
 
+    #ファイルの先頭に戻す(ファイルを先頭から読み直すときに使用する)
     f.rewind()
 
     f.close()
