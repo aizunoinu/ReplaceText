@@ -6,7 +6,7 @@
 DIR = Dir.pwd
 
 #変数DIRで指定したディレクトリでtxtファイルを検索する
-Dir.glob("#{DIR}/*.txt") do |file|
+Dir.glob("#{DIR}/*.txt").each do |file|
     print "#{file} に対して置換処理を実施します\n"
     #ファイルを読み取り形式で開く
     f = File.open(file, "r")
